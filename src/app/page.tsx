@@ -9,18 +9,24 @@ export default function Home() {
     <Box>
       <Navbar />
       {/* Hero Section */}
-      <Box bg="brand.background" py={{ base: 24, md: 40 }}>
-        <Container maxW="container.xl">
-          <VStack gap={20} textAlign="center">
+      <Box bg="brand.background" py={{ base: 32, md: 40 }}>
+        <Container maxW="container.xl" px={{ base: 4, md: 6 }}>
+          <VStack gap={{ base: 12, md: 20 }} textAlign="center">
             <Heading
               as="h1"
-              fontSize={{ base: "5xl", md: "7xl" }}
+              fontSize={{ base: "6xl", sm: "6xl", md: "7xl" }}
               fontWeight="600"
               color="brand.green"
+              px={{ base: 4, md: 0 }}
+              lineHeight={{ base: "1.2", md: "1.1" }}
+              display={{ base: "flex", md: "block" }}
+              flexDirection={{ base: "column", md: "row" }}
             >
-              water your friendships.
+              <Box as="span" display={{ base: "block", md: "inline" }}>water your</Box>
+              {' '}
+              <Box as="span" display={{ base: "block", md: "inline" }}>friendships.</Box>
             </Heading>
-            <Box>
+            <Box w="full" px={{ base: 4, md: 0 }}>
               <WaitlistForm />
             </Box>
           </VStack>

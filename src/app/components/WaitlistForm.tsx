@@ -62,8 +62,8 @@ export function WaitlistForm() {
   }
 
   return (
-    <Box as="form" onSubmit={handleSubmit} w="full" maxW="md">
-      <HStack gap={2}>
+    <Box as="form" onSubmit={handleSubmit} w="full" maxW="md" mx="auto">
+      <HStack gap={2} flexDirection={{ base: 'column', sm: 'row' }}>
         <Input
           type="email"
           value={email}
@@ -77,6 +77,8 @@ export function WaitlistForm() {
           _hover={{ borderColor: 'brand.green' }}
           _focus={{ borderColor: 'brand.green', boxShadow: 'none' }}
           disabled={loading}
+          w={{ base: 'full', sm: 'auto' }}
+          flex={{ base: 'none', sm: '1' }}
         />
         <Button
           type="submit"
@@ -87,6 +89,7 @@ export function WaitlistForm() {
           fontWeight="800"
           _hover={{ bg: 'brand.darkGreen' }}
           disabled={loading}
+          w={{ base: 'full', sm: 'auto' }}
         >
           {loading ? 'joining...' : 'join waitlist'}
         </Button>
