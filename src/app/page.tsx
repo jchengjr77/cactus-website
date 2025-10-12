@@ -9,12 +9,12 @@ export default function Home() {
     <Box>
       <Navbar />
       {/* Hero Section */}
-      <Box bg="brand.background" py={{ base: 32, md: 40 }}>
-        <Container maxW="container.xl" px={{ base: 4, md: 6 }}>
-          <VStack gap={{ base: 12, md: 20 }} textAlign="center">
+      <Box bg="brand.background" py={{ base: 32, md: 0 }} minH={{ base: "auto", md: "calc(100vh - 100px)" }} display={{ base: "block", md: "flex" }} alignItems={{ base: "flex-start", md: "center" }}>
+        <Container maxW="container.xl" px={{ base: 4, md: 6 }} w="full">
+          <VStack gap={{ base: 12, md: 24 }} textAlign="center">
             <Heading
               as="h1"
-              fontSize={{ base: "6xl", sm: "6xl", md: "7xl" }}
+              fontSize={{ base: "6xl", sm: "6xl", md: "8xl", lg: "9xl" }}
               fontWeight="600"
               color="brand.green"
               px={{ base: 4, md: 0 }}
@@ -34,12 +34,12 @@ export default function Home() {
       </Box>
 
       {/* How It Works Section */}
-      <Box bg="brand.background" py={{ base: 16, md: 24 }} borderTop="1px" borderColor="brand.lightGrey">
-        <Container maxW="container.xl" px={{ base: 4, md: 6 }}>
-          <VStack gap={{ base: 12, md: 16 }}>
+      <Box bg="brand.background" py={{ base: 16, md: 40 }} borderTop="1px" borderColor="brand.lightGrey" minH={{ base: "auto", md: "100vh" }} display={{ base: "block", md: "flex" }} alignItems={{ base: "flex-start", md: "center" }}>
+        <Container maxW="container.xl" px={{ base: 4, md: 6 }} w="full">
+          <VStack gap={{ base: 12, md: 20 }}>
             <Heading
               as="h2"
-              fontSize={{ base: "3xl", md: "4xl" }}
+              fontSize={{ base: "3xl", md: "5xl" }}
               fontWeight="600"
               color="brand.green"
               textAlign="center"
@@ -58,13 +58,14 @@ export default function Home() {
 
               <Flex
                 direction={{ base: "column", md: "row" }}
-                gap={{ base: 8, md: 12 }}
+                gap={{ base: 8, md: 16 }}
                 align="center"
+                justify="center"
                 w="full"
               >
                 {/* Screenshot Placeholder */}
                 <Box
-                  w={{ base: "200px", md: "250px" }}
+                  w={{ base: "200px", md: "320px" }}
                   aspectRatio={9/16}
                   bg="brand.lightGrey"
                   borderRadius="xl"
@@ -77,19 +78,19 @@ export default function Home() {
                   flexShrink={0}
                 >
                   <VStack gap={2}>
-                    <Box fontSize="3xl">📱</Box>
-                    <Box fontSize="xs" color="brand.green" fontWeight="600" px={2} textAlign="center">
+                    <Box fontSize="4xl">📱</Box>
+                    <Box fontSize="sm" color="brand.green" fontWeight="600" px={2} textAlign="center">
                       screenshot
                     </Box>
                   </VStack>
                 </Box>
 
                 {/* Description - Desktop */}
-                <VStack gap={6} align={{ base: "center", md: "flex-start" }} textAlign={{ base: "center", md: "left" }} flex={1}>
-                  <Box fontSize={{ base: "lg", md: "lg" }} color="brand.green" lineHeight="1.8" fontWeight={400} display={{ base: "none", md: "block" }}>
+                <VStack gap={6} align={{ base: "center", md: "flex-start" }} textAlign={{ base: "center", md: "left" }} maxW={{ base: "full", md: "lg" }}>
+                  <Box fontSize={{ base: "lg", md: "xl" }} color="brand.green" lineHeight="1.8" fontWeight={400} display={{ base: "none", md: "block" }}>
                     staying connected to your friends&family should be easy.
                   </Box>
-                  <Box fontSize={{ base: "lg", md: "lg" }} color="brand.green" lineHeight="1.8" fontWeight={500}>
+                  <Box fontSize={{ base: "lg", md: "xl" }} color="brand.green" lineHeight="1.8" fontWeight={500}>
                    🌵 add people to groups <br />
                    📝 share updates on a schedule <br />
                    🔥 earn rewards through consistency<br />
@@ -104,10 +105,10 @@ export default function Home() {
       {/* Bottom Waitlist Section */}
       <Box bg="brand.background" py={{ base: 16, md: 20 }} borderTop="1px" borderColor="brand.lightGrey">
         <Container maxW="container.xl" px={{ base: 4, md: 6 }}>
-          <VStack gap={4} textAlign="center">
+          <VStack gap={8} textAlign="center">
             <Heading
               as="h3"
-              fontSize={{ base: "xl", md: "2xl" }}
+              fontSize={{ base: "2xl", md: "3xl" }}
               fontWeight="600"
               color="brand.green"
             >
