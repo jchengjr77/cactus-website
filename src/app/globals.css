@@ -2,7 +2,7 @@
 
 :root {
   --background: #FFFEFD;
-  --foreground: #171717;
+  --foreground: #408f48;
 }
 
 @theme inline {
@@ -15,7 +15,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #FFFEFD;
-    --foreground: #171717;
+    --foreground: #408f48;
   }
 }
 
@@ -24,6 +24,16 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body::before {

@@ -12,61 +12,29 @@ export function Navbar() {
       <Container maxW="container.xl">
         <Flex justify="space-between" align="center">
           {/* Logo */}
-          <Link href="/" passHref>
-            <ChakraLink display="flex" alignItems="center" gap={2} _hover={{ textDecoration: 'none' }}>
+          <ChakraLink asChild display="flex" alignItems="center" gap={2} _hover={{ textDecoration: 'none' }}>
+            <Link href="/">
               <Text fontSize="2xl">🌵</Text>
               <Text fontSize="2xl" fontWeight="800" color="brand.green">
                 cactus
               </Text>
-            </ChakraLink>
-          </Link>
+            </Link>
+          </ChakraLink>
 
           {/* Desktop Menu Items */}
           <HStack gap={8} display={{ base: 'none', md: 'flex' }}>
-            <Link href="/about" passHref>
-              <ChakraLink
-                fontSize="md"
-                fontWeight="600"
-                color="brand.black"
-                textTransform="uppercase"
-                _hover={{ color: 'brand.green' }}
-              >
-                about
-              </ChakraLink>
-            </Link>
-            <Link href="/faq" passHref>
-              <ChakraLink
-                fontSize="md"
-                fontWeight="600"
-                color="brand.black"
-                textTransform="uppercase"
-                _hover={{ color: 'brand.green' }}
-              >
-                faq
-              </ChakraLink>
-            </Link>
-            <Link href="/pricing" passHref>
-              <ChakraLink
-                fontSize="md"
-                fontWeight="600"
-                color="brand.black"
-                textTransform="uppercase"
-                _hover={{ color: 'brand.green' }}
-              >
-                pricing
-              </ChakraLink>
-            </Link>
-            <Link href="/hall-of-fame" passHref>
-              <ChakraLink
-                fontSize="md"
-                fontWeight="600"
-                color="brand.highlight"
-                textTransform="uppercase"
-                _hover={{ color: 'brand.green' }}
-              >
-                hall of fame
-              </ChakraLink>
-            </Link>
+            <ChakraLink asChild fontSize="md" fontWeight="600" color="brand.green" textTransform="uppercase" _hover={{ color: 'brand.darkGreen' }}>
+              <Link href="/about">about</Link>
+            </ChakraLink>
+            <ChakraLink asChild fontSize="md" fontWeight="600" color="brand.green" textTransform="uppercase" _hover={{ color: 'brand.darkGreen' }}>
+              <Link href="/faq">faq</Link>
+            </ChakraLink>
+            <ChakraLink asChild fontSize="md" fontWeight="600" color="brand.green" textTransform="uppercase" _hover={{ color: 'brand.darkGreen' }}>
+              <Link href="/pricing">pricing</Link>
+            </ChakraLink>
+            <ChakraLink asChild fontSize="md" fontWeight="600" color="brand.highlight" textTransform="uppercase" _hover={{ color: 'brand.green' }}>
+              <Link href="/hall-of-fame">hall of fame</Link>
+            </ChakraLink>
           </HStack>
 
           {/* Mobile Menu Button */}
@@ -94,54 +62,18 @@ export function Navbar() {
             borderColor="brand.lightGrey"
             align="stretch"
           >
-            <Link href="/about" passHref>
-              <ChakraLink
-                fontSize="md"
-                fontWeight="600"
-                color="brand.black"
-                textTransform="uppercase"
-                _hover={{ color: 'brand.green' }}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                about
-              </ChakraLink>
-            </Link>
-            <Link href="/faq" passHref>
-              <ChakraLink
-                fontSize="md"
-                fontWeight="600"
-                color="brand.black"
-                textTransform="uppercase"
-                _hover={{ color: 'brand.green' }}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                faq
-              </ChakraLink>
-            </Link>
-            <Link href="/pricing" passHref>
-              <ChakraLink
-                fontSize="md"
-                fontWeight="600"
-                color="brand.black"
-                textTransform="uppercase"
-                _hover={{ color: 'brand.green' }}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                pricing
-              </ChakraLink>
-            </Link>
-            <Link href="/hall-of-fame" passHref>
-              <ChakraLink
-                fontSize="md"
-                fontWeight="600"
-                color="brand.highlight"
-                textTransform="uppercase"
-                _hover={{ color: 'brand.green' }}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                hall of fame
-              </ChakraLink>
-            </Link>
+            <ChakraLink asChild fontSize="md" fontWeight="600" color="brand.green" textTransform="uppercase" _hover={{ color: 'brand.darkGreen' }}>
+              <Link href="/about" onClick={() => setMobileMenuOpen(false)}>about</Link>
+            </ChakraLink>
+            <ChakraLink asChild fontSize="md" fontWeight="600" color="brand.green" textTransform="uppercase" _hover={{ color: 'brand.darkGreen' }}>
+              <Link href="/faq" onClick={() => setMobileMenuOpen(false)}>faq</Link>
+            </ChakraLink>
+            <ChakraLink asChild fontSize="md" fontWeight="600" color="brand.green" textTransform="uppercase" _hover={{ color: 'brand.darkGreen' }}>
+              <Link href="/pricing" onClick={() => setMobileMenuOpen(false)}>pricing</Link>
+            </ChakraLink>
+            <ChakraLink asChild fontSize="md" fontWeight="600" color="brand.highlight" textTransform="uppercase" _hover={{ color: 'brand.green' }}>
+              <Link href="/hall-of-fame" onClick={() => setMobileMenuOpen(false)}>hall of fame</Link>
+            </ChakraLink>
           </VStack>
         )}
       </Container>

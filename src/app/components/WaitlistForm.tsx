@@ -54,7 +54,7 @@ export function WaitlistForm() {
   if (success) {
     return (
       <Box textAlign="center" py={4}>
-        <Text fontSize="lg" color="brand.black" fontWeight="600">
+        <Text fontSize="lg" color="brand.green" fontWeight="600">
           welcome to the cactus app :)
         </Text>
       </Box>
@@ -68,12 +68,12 @@ export function WaitlistForm() {
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="your email"
+          placeholder="email"
           size="lg"
           bg="brand.background"
           borderColor="brand.lightGrey"
-          color="brand.black"
-          _placeholder={{ color: 'gray.500' }}
+          color="brand.green"
+          _placeholder={{ color: 'brand.green', opacity: 0.6 }}
           _hover={{ borderColor: 'brand.green' }}
           _focus={{ borderColor: 'brand.green', boxShadow: 'none' }}
           disabled={loading}

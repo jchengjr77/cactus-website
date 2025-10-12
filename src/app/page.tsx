@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, Container, Heading, VStack } from '@chakra-ui/react'
+import { Box, Container, Flex, Heading, VStack } from '@chakra-ui/react'
 import { Navbar } from './components/Navbar'
 import { WaitlistForm } from './components/WaitlistForm'
 
@@ -25,6 +25,93 @@ export default function Home() {
               <Box as="span" display={{ base: "block", md: "inline" }}>water your</Box>
               {' '}
               <Box as="span" display={{ base: "block", md: "inline" }}>friendships.</Box>
+            </Heading>
+            <Box w="full" px={{ base: 4, md: 0 }}>
+              <WaitlistForm />
+            </Box>
+          </VStack>
+        </Container>
+      </Box>
+
+      {/* How It Works Section */}
+      <Box bg="brand.background" py={{ base: 16, md: 24 }} borderTop="1px" borderColor="brand.lightGrey">
+        <Container maxW="container.xl" px={{ base: 4, md: 6 }}>
+          <VStack gap={{ base: 12, md: 16 }}>
+            <Heading
+              as="h2"
+              fontSize={{ base: "3xl", md: "4xl" }}
+              fontWeight="600"
+              color="brand.green"
+              textAlign="center"
+            >
+              how it works
+            </Heading>
+
+            {/* Content: Screenshot and Description Side by Side */}
+            <VStack gap={{ base: 8, md: 12 }} w="full">
+              {/* Description - Mobile First */}
+              <VStack gap={6} align={{ base: "center", md: "flex-start" }} textAlign={{ base: "center", md: "left" }} w="full" display={{ base: "flex", md: "none" }}>
+                <Box fontSize={{ base: "lg", md: "lg" }} color="brand.green" lineHeight="1.8" fontWeight={400}>
+                  staying connected to your friends&family should be easy.
+                </Box>
+              </VStack>
+
+              <Flex
+                direction={{ base: "column", md: "row" }}
+                gap={{ base: 8, md: 12 }}
+                align="center"
+                w="full"
+              >
+                {/* Screenshot Placeholder */}
+                <Box
+                  w={{ base: "200px", md: "250px" }}
+                  aspectRatio={9/16}
+                  bg="brand.lightGrey"
+                  borderRadius="xl"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  border="2px"
+                  borderColor="brand.green"
+                  borderStyle="dashed"
+                  flexShrink={0}
+                >
+                  <VStack gap={2}>
+                    <Box fontSize="3xl">📱</Box>
+                    <Box fontSize="xs" color="brand.green" fontWeight="600" px={2} textAlign="center">
+                      screenshot
+                    </Box>
+                  </VStack>
+                </Box>
+
+                {/* Description - Desktop */}
+                <VStack gap={6} align={{ base: "center", md: "flex-start" }} textAlign={{ base: "center", md: "left" }} flex={1}>
+                  <Box fontSize={{ base: "lg", md: "lg" }} color="brand.green" lineHeight="1.8" fontWeight={400} display={{ base: "none", md: "block" }}>
+                    staying connected to your friends&family should be easy.
+                  </Box>
+                  <Box fontSize={{ base: "lg", md: "lg" }} color="brand.green" lineHeight="1.8" fontWeight={500}>
+                   🌵 add people to groups <br />
+                   📝 share updates on a schedule <br />
+                   🔥 earn rewards through consistency<br />
+                  </Box>
+                </VStack>
+              </Flex>
+            </VStack>
+          </VStack>
+        </Container>
+      </Box>
+
+      {/* Bottom Waitlist Section */}
+      <Box bg="brand.background" py={{ base: 16, md: 20 }} borderTop="1px" borderColor="brand.lightGrey">
+        <Container maxW="container.xl" px={{ base: 4, md: 6 }}>
+          <VStack gap={4} textAlign="center">
+            <Heading
+              as="h3"
+              fontSize={{ base: "xl", md: "2xl" }}
+              fontWeight="600"
+              color="brand.green"
+            >
+              your people are waiting
             </Heading>
             <Box w="full" px={{ base: 4, md: 0 }}>
               <WaitlistForm />
