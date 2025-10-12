@@ -14,7 +14,7 @@ export default function About() {
             <Heading
               as="h1"
               fontSize={{ base: "5xl", md: "6xl" }}
-              fontWeight="600"
+              fontWeight="700"
               color="brand.green"
               textAlign="center"
             >
@@ -35,15 +35,12 @@ export default function About() {
                     how to use <b>cactus</b>
                   </Heading>
                   <Box>
-                    <Text fontSize={{ base: "md", md: "md" }} color="brand.green" lineHeight="1.8" mb={2}>
+                    <Text fontSize={{ base: "md", md: "md" }} color="brand.green" lineHeight="1.8">
                       create a <strong>group</strong> with your friends.<br />
                       set a <strong>cadence</strong> for posting updates. <br />
                       post your <strong>updates</strong> (preferably on time). <br />
                       interact with your group to earn <strong>points</strong>. <br />
                     </Text>
-                    <ChakraLink asChild fontSize="sm" fontWeight="400" color="brand.green" _hover={{ color: 'brand.vibrantGreen' }}>
-                      <Link href="/faq">learn more</Link>
-                    </ChakraLink>
                   </Box>
                 </VStack>
               </Box>
@@ -84,9 +81,12 @@ export default function About() {
                     points and rewards
                   </Heading>
                   <Box>
-                    <Text fontSize={{ base: "md", md: "md" }} color="brand.green" lineHeight="1.8">
+                    <Text fontSize={{ base: "md", md: "md" }} color="brand.green" lineHeight="1.8" mb={2}>
                       earn <strong>points</strong> by staying active and consistent with your group. unlock exclusive <strong>rewards</strong> like emoji packs, custom themes, and even physical merch.
                     </Text>
+                    <ChakraLink asChild fontSize="sm" fontWeight="400" color="brand.green" _hover={{ color: 'brand.vibrantGreen' }}>
+                      <Link href="/faq#earn-points">learn more</Link>
+                    </ChakraLink>
                   </Box>
                 </VStack>
               </Box>
