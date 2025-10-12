@@ -9,7 +9,7 @@ export function Navbar() {
       <Container maxW="container.xl">
         <Flex justify="space-between" align="center">
           {/* Logo */}
-          <Link href="/" passHref legacyBehavior>
+          <Link href="/" passHref>
             <ChakraLink display="flex" alignItems="center" gap={2} _hover={{ textDecoration: 'none' }}>
               <Text fontSize="2xl">🌵</Text>
               <Text fontSize="2xl" fontWeight="800" color="brand.green">
@@ -20,7 +20,7 @@ export function Navbar() {
 
           {/* Menu Items */}
           <HStack gap={8} display={{ base: 'none', md: 'flex' }}>
-            <Link href="/resources" passHref legacyBehavior>
+            <Link href="/resources" passHref>
               <ChakraLink
                 fontSize="md"
                 fontWeight="600"
@@ -31,7 +31,7 @@ export function Navbar() {
                 resources
               </ChakraLink>
             </Link>
-            <Link href="/pricing" passHref legacyBehavior>
+            <Link href="/pricing" passHref>
               <ChakraLink
                 fontSize="md"
                 fontWeight="600"
@@ -42,7 +42,7 @@ export function Navbar() {
                 pricing
               </ChakraLink>
             </Link>
-            <Link href="/hall-of-fame" passHref legacyBehavior>
+            <Link href="/hall-of-fame" passHref>
               <ChakraLink
                 fontSize="md"
                 fontWeight="600"
