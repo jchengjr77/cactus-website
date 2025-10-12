@@ -12,7 +12,7 @@ export function Navbar() {
           <Link href="/" passHref legacyBehavior>
             <ChakraLink display="flex" alignItems="center" gap={2} _hover={{ textDecoration: 'none' }}>
               <Text fontSize="2xl">🌵</Text>
-              <Text fontSize="2xl" fontWeight="900" color="brand.green">
+              <Text fontSize="2xl" fontWeight="800" color="brand.green">
                 cactus
               </Text>
             </ChakraLink>
@@ -25,6 +25,7 @@ export function Navbar() {
                 fontSize="md"
                 fontWeight="600"
                 color="brand.black"
+                textTransform="uppercase"
                 _hover={{ color: 'brand.green' }}
               >
                 resources
@@ -35,6 +36,7 @@ export function Navbar() {
                 fontSize="md"
                 fontWeight="600"
                 color="brand.black"
+                textTransform="uppercase"
                 _hover={{ color: 'brand.green' }}
               >
                 pricing
@@ -44,7 +46,8 @@ export function Navbar() {
               <ChakraLink
                 fontSize="md"
                 fontWeight="600"
-                color="green.600"
+                color="brand.highlight"
+                textTransform="uppercase"
                 _hover={{ color: 'brand.green' }}
               >
                 hall of fame

@@ -35,7 +35,7 @@ export function WaitlistForm() {
     try {
       const { error: supabaseError } = await supabase
         .from('waitlist')
-        .insert([{ email: email.toLowerCase().trim() }])
+        .insert([{email: email}])
 
       if (supabaseError) {
         throw supabaseError
@@ -54,8 +54,8 @@ export function WaitlistForm() {
   if (success) {
     return (
       <Box textAlign="center" py={4}>
-        <Text fontSize="lg" color="brand.darkGreen" fontWeight="600">
-          ✓ welcome to cactus
+        <Text fontSize="lg" color="brand.black" fontWeight="600">
+          welcome to the cactus app :)
         </Text>
       </Box>
     )
@@ -84,7 +84,8 @@ export function WaitlistForm() {
           bg="brand.green"
           color="brand.background"
           px={8}
-          _hover={{ bg: 'brand.lightGreen' }}
+          fontWeight="800"
+          _hover={{ bg: 'brand.darkGreen' }}
           disabled={loading}
         >
           {loading ? 'joining...' : 'join waitlist'}

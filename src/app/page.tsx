@@ -14,11 +14,11 @@ export default function Home() {
           <VStack gap={20} textAlign="center">
             <Heading
               as="h1"
-              fontSize={{ base: "6xl", md: "8xl" }}
-              fontWeight="700"
+              fontSize={{ base: "5xl", md: "7xl" }}
+              fontWeight="600"
               color="brand.green"
             >
-              water your friendships
+              water your friendships.
             </Heading>
             <Box>
               <WaitlistForm />

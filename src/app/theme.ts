@@ -10,7 +10,8 @@ export const system = createSystem(defaultConfig, {
           lightGrey: { value: '#DBE4C9' },      // light grey
           lightGreen: { value: '#6bc77a' },     // light green
           green: { value: '#408f48' },          // brand green
-          darkGreen: { value: '#668f40' },      // dark green (brown)
+          vibrantGreen: { value: '#668f40' },   // greener green (brownish)
+          darkGreen: { value: '#28542d' },      // dark green
           black: { value: '#1A1A19' },          // black
         }
       },

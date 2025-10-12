@@ -6,7 +6,6 @@ import { Providers } from "./providers";
 const workSans = Work_Sans({
   variable: "--font-work-sans",
   subsets: ["latin"],
-  display: 'swap',
   weight: ['400', '500', '600', '700', '800', '900'],
 });
 
@@ -22,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${workSans.variable} antialiased`}>
+      <body className={`${workSans.className} antialiased`}>
         <Providers>{children}</Providers>
       </body>
     </html>
