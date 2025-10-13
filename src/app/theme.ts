@@ -6,6 +6,7 @@ export const system = createSystem(defaultConfig, {
       colors: {
         brand: {
           highlight: { value: '#b39e36' },      // highlights
+          darkGold: { value: '#948125' },       // dark gold
           background: { value: '#FFFEFD' },     // background (light cream)
           lightGrey: { value: '#DBE4C9' },      // light grey
           lightGreen: { value: '#6bc77a' },     // light green

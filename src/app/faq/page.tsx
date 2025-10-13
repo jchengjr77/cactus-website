@@ -184,6 +184,40 @@ export default function FAQ() {
                   </Box>
                 )}
               </Box>
+
+              <Box borderBottom="1px" borderColor="brand.lightGrey" pb={4}>
+                <Heading
+                  as="h2"
+                  fontSize={{ base: "xl", md: "2xl" }}
+                  fontWeight="700"
+                  color="brand.green"
+                  cursor="pointer"
+                  onClick={() => toggleQuestion('subscription_tiers')}
+                  _hover={{ opacity: 0.8 }}
+                  display="flex"
+                  justifyContent="space-between"
+                  alignItems="center"
+                >
+                  cactus green vs gold?
+                  <Box fontSize="lg">{openQuestions.has('subscription_tiers') ? '−' : '+'}</Box>
+                </Heading>
+                {openQuestions.has('subscription_tiers') && (
+                  <Box mt={4}>
+                    <Text fontSize={{ base: "md", md: "lg" }} color="brand.green" lineHeight="1.8">
+                      There are two types of accounts in the cactus app: <b>cactus green</b> and <b>cactus gold</b>.<br/>
+                      Cactus green offers the core cactus experience <b>for free</b>, and is available to everybody. <br/>
+                      Cactus gold grants access to exclusive rewards such as:<br/>
+                      - custom <b>group merch</b> (e.g. trucker hats, tote bags, mugs, etc)<br/>
+                      - limited time <b>promotions</b> (e.g. group dinner paid for by the cactus app)<br/>
+                      - hand-drawn <b>illustrations</b> (drawn by resident artist @jjchengart)<br/>
+                      - and hall of fame eligibility!<br/><br/>
+
+                      The cactus experience is designed for cactus green users; you may use cactus indefinitely for free.<br/>
+                    </Text>
+                      <Text fontSize={{ base: "sm", md: "md" }} color="brand.darkGold" lineHeight="1.8" opacity={0.8}>(however, if those juicy merch drops are speaking to you... you know what to do)</Text>
+                  </Box>
+                )}
+              </Box>
               {/* Why is it called Cactus? */}
               <Box borderBottom="1px" borderColor="brand.lightGrey" pb={4}>
                 <Heading
