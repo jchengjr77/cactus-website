@@ -2,6 +2,7 @@
 
 import { Box, Container, Heading, VStack, Text, Flex } from '@chakra-ui/react'
 import { Navbar } from '../components/Navbar'
+import { WaitlistForm } from '../components/WaitlistForm'
 
 export default function Pricing() {
   return (
@@ -9,7 +10,7 @@ export default function Pricing() {
       <Navbar />
       <Box bg="brand.background" py={{ base: 16, md: 24 }}>
         <Container maxW="container.xl" px={{ base: 4, md: 6 }}>
-          <VStack gap={{ base: 12, md: 16 }} align="stretch">
+          <VStack gap={{ base: 8, md: 10 }} align="stretch">
             <Heading
               as="h1"
               fontSize={{ base: "5xl", md: "6xl" }}
@@ -33,7 +34,7 @@ export default function Pricing() {
               gap={{ base: 8, md: 12 }}
               justify="center"
               align={{ base: "stretch", md: "flex-start" }}
-              mt={{ base: 4, md: 8 }}
+              mt={{ base: 2, md: 4 }}
             >
               {/* Green Tier - Free */}
               <Box
@@ -142,6 +143,25 @@ export default function Pricing() {
                 </VStack>
               </Box>
             </Flex>
+          </VStack>
+        </Container>
+      </Box>
+
+      {/* Bottom Waitlist Section */}
+      <Box bg="brand.background" py={{ base: 16, md: 20 }} borderTop="1px" borderColor="brand.lightGrey">
+        <Container maxW="container.xl" px={{ base: 4, md: 6 }}>
+          <VStack gap={4} textAlign="center">
+            <Heading
+              as="h3"
+              fontSize={{ base: "xl", md: "2xl" }}
+              fontWeight="600"
+              color="brand.green"
+            >
+              ready to get started?
+            </Heading>
+            <Box w="full" px={{ base: 4, md: 0 }}>
+              <WaitlistForm />
+            </Box>
           </VStack>
         </Container>
       </Box>

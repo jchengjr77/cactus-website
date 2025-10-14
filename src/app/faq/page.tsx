@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Box, Container, Heading, VStack, Text } from '@chakra-ui/react'
 import { Navbar } from '../components/Navbar'
+import { WaitlistForm } from '../components/WaitlistForm'
 
 export default function FAQ() {
   const [openQuestions, setOpenQuestions] = useState<Set<string>>(new Set())
@@ -250,6 +251,25 @@ export default function FAQ() {
                 )}
               </Box>
             </VStack>
+          </VStack>
+        </Container>
+      </Box>
+
+      {/* Bottom Waitlist Section */}
+      <Box bg="brand.background" py={{ base: 16, md: 20 }} borderTop="1px" borderColor="brand.lightGrey">
+        <Container maxW="container.xl" px={{ base: 4, md: 6 }}>
+          <VStack gap={4} textAlign="center">
+            <Heading
+              as="h3"
+              fontSize={{ base: "xl", md: "2xl" }}
+              fontWeight="600"
+              color="brand.green"
+            >
+              ready to get started?
+            </Heading>
+            <Box w="full" px={{ base: 4, md: 0 }}>
+              <WaitlistForm />
+            </Box>
           </VStack>
         </Container>
       </Box>

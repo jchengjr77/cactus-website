@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, Container, Flex, Heading, VStack } from '@chakra-ui/react'
+import { Box, Container, Flex, Heading, VStack, Image } from '@chakra-ui/react'
 import { Navbar } from './components/Navbar'
 import { WaitlistForm } from './components/WaitlistForm'
 
@@ -63,26 +63,20 @@ export default function Home() {
                 justify="center"
                 w="full"
               >
-                {/* Screenshot Placeholder */}
+                {/* Screenshot */}
                 <Box
                   w={{ base: "200px", md: "320px" }}
-                  aspectRatio={9/16}
-                  bg="brand.lightGrey"
-                  borderRadius="xl"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  border="2px"
-                  borderColor="brand.green"
-                  borderStyle="dashed"
                   flexShrink={0}
                 >
-                  <VStack gap={2}>
-                    <Box fontSize="4xl">📱</Box>
-                    <Box fontSize="sm" color="brand.green" fontWeight="600" px={2} textAlign="center">
-                      screenshot
-                    </Box>
-                  </VStack>
+                  <Image
+                    src="/screenshots/home.PNG"
+                    alt="Cactus app home screen"
+                    width={{ base: 200, md: 320 }}
+                    height="auto"
+                    borderRadius="xl"
+                    border="2px solid"
+                    borderColor="brand.green"
+                  />
                 </Box>
 
                 {/* Description - Desktop */}

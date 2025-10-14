@@ -1,7 +1,8 @@
 'use client'
 
-import { Box, Container, Heading, VStack, Text, Link as ChakraLink, Flex } from '@chakra-ui/react'
+import { Box, Container, Heading, VStack, Text, Link as ChakraLink, Flex, Image } from '@chakra-ui/react'
 import { Navbar } from '../components/Navbar'
+import { WaitlistForm } from '../components/WaitlistForm'
 import Link from 'next/link'
 
 export default function About() {
@@ -49,23 +50,17 @@ export default function About() {
               <Box display="flex" justifyContent="center" alignItems="flex-start" px={{ md: 4 }}>
                 <Box
                   w={{ base: "220px", md: "280px" }}
-                  aspectRatio={9/16}
-                  bg="brand.lightGrey"
-                  borderRadius="xl"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  border="2px"
-                  borderColor="brand.green"
-                  borderStyle="dashed"
                   flexShrink={0}
                 >
-                  <VStack gap={2}>
-                    <Box fontSize="3xl">📱</Box>
-                    <Box fontSize="xs" color="brand.green" fontWeight="600" px={2} textAlign="center">
-                      screenshot
-                    </Box>
-                  </VStack>
+                  <Image
+                    src="/screenshots/groups.PNG"
+                    alt="Cactus app groups screen"
+                    width={{ base: 220, md: 280 }}
+                    height="auto"
+                    borderRadius="xl"
+                    border="2px solid"
+                    borderColor="brand.green"
+                  />
                 </Box>
               </Box>
 
@@ -90,6 +85,25 @@ export default function About() {
                   </Box>
                 </VStack>
               </Box>
+            </Box>
+          </VStack>
+        </Container>
+      </Box>
+
+      {/* Bottom Waitlist Section */}
+      <Box bg="brand.background" py={{ base: 16, md: 20 }} borderTop="1px" borderColor="brand.lightGrey">
+        <Container maxW="container.xl" px={{ base: 4, md: 6 }}>
+          <VStack gap={4} textAlign="center">
+            <Heading
+              as="h3"
+              fontSize={{ base: "xl", md: "2xl" }}
+              fontWeight="600"
+              color="brand.green"
+            >
+              ready to get started?
+            </Heading>
+            <Box w="full" px={{ base: 4, md: 0 }}>
+              <WaitlistForm />
             </Box>
           </VStack>
         </Container>
