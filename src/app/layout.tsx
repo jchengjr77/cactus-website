@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
+import { Analytics } from "@vercel/analytics/next";
 
 const workSans = Work_Sans({
   variable: "--font-work-sans",
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${workSans.className} antialiased`}>
         <Providers>{children}</Providers>
+        <Analytics />
       </body>
     </html>
   );
