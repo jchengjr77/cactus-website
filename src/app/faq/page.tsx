@@ -92,7 +92,7 @@ export default function FAQ() {
                       <Text fontSize={{ base: "md", md: "lg" }} color="brand.green" lineHeight="1.8">• bad texters</Text>
                       <Text fontSize={{ base: "md", md: "lg" }} color="brand.green" lineHeight="1.8">• the gc</Text>
                       <Text fontSize={{ base: "md", md: "lg" }} color="brand.green" lineHeight="1.8">• the exclusive four-person gc</Text>
-                      <Text fontSize={{ base: "md", md: "lg" }} color="brand.green" lineHeight="1.8">• the ultra-exclusive three-person gc that that one person isn't in</Text>
+                      <Text fontSize={{ base: "md", md: "lg" }} color="brand.green" lineHeight="1.8">• the ultra-exclusive three-person gc that that one person isn&apos;t in</Text>
                       <Text fontSize={{ base: "md", md: "lg" }} color="brand.green" lineHeight="1.8">• coffee lovers</Text>
                       <Text fontSize={{ base: "md", md: "lg" }} color="brand.green" lineHeight="1.8">• beli fanatics</Text>
                       <Text fontSize={{ base: "md", md: "lg" }} color="brand.green" lineHeight="1.8">• dog owners</Text>
@@ -143,7 +143,7 @@ export default function FAQ() {
                       Each <strong>group</strong> will have a <strong>points total</strong>, which will grow over time.<br /><br />Here are some things that earn you points:
                     </Text>
                     <VStack align="flex-start" gap={1}>
-                      <Text fontSize={{ base: "md", md: "lg" }} color="brand.green" lineHeight="1.8">• Each individual's update</Text>
+                      <Text fontSize={{ base: "md", md: "lg" }} color="brand.green" lineHeight="1.8">• Each individual&apos;s update</Text>
                       <Text fontSize={{ base: "md", md: "lg" }} color="brand.green" lineHeight="1.8">• A <b>Complete Update</b> (i.e. when all group members post their update on time)</Text>
                       <Text fontSize={{ base: "md", md: "lg" }} color="brand.green" lineHeight="1.8">• Comments</Text>
                       <Text fontSize={{ base: "md", md: "lg" }} color="brand.green" lineHeight="1.8">• Reactions</Text>
@@ -245,7 +245,7 @@ export default function FAQ() {
                       However, cacti will <em>eventually</em> die without water. Every so often, they need attention. Cacti are low-maintenance, not no-maintenance.<br /> <br />(you probably see the parallels here...)
                     </Text>
                     <Text fontSize={{ base: "md", md: "lg" }} color="brand.green" lineHeight="1.8" mt={2}>
-                      <br />More importantly, they're bulbous and cutely shaped.
+                      <br />More importantly, they&apos;re bulbous and cutely shaped.
                     </Text>
                   </Box>
                 )}

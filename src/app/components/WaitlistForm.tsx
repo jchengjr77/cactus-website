@@ -43,7 +43,7 @@ export function WaitlistForm() {
 
       setSuccess(true)
       setEmail('')
-    } catch (err: any) {
+    } catch (err) {
       setError('something went wrong. please try again.')
       console.error('Error adding to waitlist:', err)
     } finally {

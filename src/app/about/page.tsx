@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, Container, Heading, VStack, Text, Link as ChakraLink, Flex, Image } from '@chakra-ui/react'
+import { Box, Container, Heading, VStack, Text, Link as ChakraLink, Image } from '@chakra-ui/react'
 import { Navbar } from '../components/Navbar'
 import { WaitlistForm } from '../components/WaitlistForm'
 import Link from 'next/link'
