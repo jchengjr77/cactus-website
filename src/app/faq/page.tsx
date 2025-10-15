@@ -180,7 +180,18 @@ export default function FAQ() {
                 {openQuestions.has('rewards') && (
                   <Box mt={4}>
                     <Text fontSize={{ base: "md", md: "lg" }} color="brand.green" lineHeight="1.8">
-                      Cactus groups earn <b>rewards</b> as their point total meets certain thresholds. For example, at 100 points the group gets a new emoji pack for reactions.
+                      Cactus groups earn <b>rewards</b> as their point total meets certain thresholds. For example, at 100 points the group gets a new emoji pack for reactions.<br /><br />
+
+                      Rewards include:<br/>
+                      Custom merch drops for your group (tote bags, hats, etc)<br />
+                      Hall of Fame status<br />
+                      Custom art and illustrations<br />
+                      Event funding (e.g. dinner on us)<br />
+                      Reaction emoji packs<br/>
+                      App color themes and fonts<br/>
+                      Display badges for achievements<br/>
+                      Group-specific cactus wrapped<br />
+                      and much more :)
                     </Text>
                   </Box>
                 )}
