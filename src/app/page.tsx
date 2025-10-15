@@ -52,7 +52,7 @@ export default function Home() {
               {/* Description - Mobile First */}
               <VStack gap={6} align={{ base: "center", md: "flex-start" }} textAlign={{ base: "center", md: "left" }} w="full" display={{ base: "flex", md: "none" }}>
                 <Box fontSize={{ base: "lg", md: "lg" }} color="brand.green" lineHeight="1.8" fontWeight={400}>
-                  staying connected to your friends&family should be easy.
+                  staying connected to friends & family should be easy.
                 </Box>
               </VStack>
 
@@ -82,7 +82,7 @@ export default function Home() {
                 {/* Description - Desktop */}
                 <VStack gap={6} align={{ base: "center", md: "flex-start" }} textAlign={{ base: "center", md: "left" }} maxW={{ base: "full", md: "lg" }}>
                   <Box fontSize={{ base: "lg", md: "xl" }} color="brand.green" lineHeight="1.8" fontWeight={400} display={{ base: "none", md: "block" }}>
-                    staying connected to your friends&family should be easy.
+                    staying connected to friends & family should be easy.
                   </Box>
                   <Box fontSize={{ base: "lg", md: "xl" }} color="brand.green" lineHeight="1.8" fontWeight={500}>
                    🌵 add people to groups <br />
