@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Work_Sans } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import { Analytics } from "@vercel/analytics/next";
 
-const workSans = Work_Sans({
-  variable: "--font-work-sans",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
-  weight: ['400', '500', '600', '700', '800', '900'],
+  weight: ['400', '500', '600', '700', '800'],
 });
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${workSans.className} antialiased`}>
+      <body className={`${jetbrainsMono.className} antialiased`}>
         <Providers>{children}</Providers>
         <Analytics />
       </body>

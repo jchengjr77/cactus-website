@@ -15,7 +15,7 @@ export function Navbar() {
           <ChakraLink asChild display="flex" alignItems="center" gap={2} _hover={{ textDecoration: 'none' }}>
             <Link href="/">
               <Text fontSize="2xl">🌵</Text>
-              <Text fontSize="2xl" fontWeight="800" color="brand.green">
+              <Text fontSize="2xl" fontWeight="800" color="brand.green" style={{ fontWeight: 800 }}>
                 cactus
               </Text>
             </Link>

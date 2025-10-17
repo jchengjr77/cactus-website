@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, Container, Heading, VStack, Text, Flex } from '@chakra-ui/react'
+import { Box, Container, Heading, VStack, Text, Flex, Image } from '@chakra-ui/react'
 import { Navbar } from '../components/Navbar'
 import { WaitlistForm } from '../components/WaitlistForm'
 
@@ -8,8 +8,8 @@ export default function Pricing() {
   return (
     <Box>
       <Navbar />
-      <Box bg="brand.background" py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl" px={{ base: 4, md: 6 }}>
+      <Box bg="brand.background" py={{ base: 16, md: 24 }} position="relative">
+        <Container maxW="container.md" px={{ base: 4, md: 6 }} mx="auto">
           <VStack gap={{ base: 8, md: 10 }} align="stretch">
             <Heading
               as="h1"
@@ -148,8 +148,8 @@ export default function Pricing() {
       </Box>
 
       {/* Bottom Waitlist Section */}
-      <Box bg="brand.background" py={{ base: 16, md: 20 }} borderTop="1px" borderColor="brand.lightGrey">
-        <Container maxW="container.xl" px={{ base: 4, md: 6 }}>
+      <Box bg="brand.background" py={{ base: 16, md: 20 }} borderTop="1px" borderColor="brand.lightGrey" position="relative">
+        <Container maxW="container.md" px={{ base: 4, md: 6 }} mx="auto">
           <VStack gap={4} textAlign="center">
             <Heading
               as="h3"

@@ -9,18 +9,19 @@ export default function Home() {
     <Box>
       <Navbar />
       {/* Hero Section */}
-      <Box bg="brand.background" py={{ base: 32, md: 0 }} minH={{ base: "auto", md: "calc(100vh - 100px)" }} display={{ base: "block", md: "flex" }} alignItems={{ base: "flex-start", md: "center" }}>
-        <Container maxW="container.xl" px={{ base: 4, md: 6 }} w="full">
+      <Box bg="brand.background" py={{ base: 32, md: 0 }} minH={{ base: "auto", md: "calc(100vh - 100px)" }} display={{ base: "block", md: "flex" }} alignItems={{ base: "flex-start", md: "center" }} position="relative">
+        <Container maxW="container.md" px={{ base: 4, md: 6 }} w="full" mx="auto">
           <VStack gap={{ base: 12, md: 24 }} textAlign="center">
             <Heading
               as="h1"
               fontSize={{ base: "6xl", sm: "6xl", md: "8xl", lg: "9xl" }}
-              fontWeight="600"
+              fontWeight="800"
               color="brand.green"
               px={{ base: 4, md: 0 }}
               lineHeight={{ base: "1.2", md: "1.1" }}
               display={{ base: "flex", md: "block" }}
               flexDirection={{ base: "column", md: "row" }}
+              style={{ fontWeight: 800 }}
             >
               <Box as="span" display={{ base: "block", md: "inline" }}>water your</Box>
               {' '}
@@ -34,8 +35,8 @@ export default function Home() {
       </Box>
 
       {/* How It Works Section */}
-      <Box bg="brand.background" py={{ base: 16, md: 40 }} borderTop="1px" borderColor="brand.lightGrey" minH={{ base: "auto", md: "100vh" }} display={{ base: "block", md: "flex" }} alignItems={{ base: "flex-start", md: "center" }}>
-        <Container maxW="container.xl" px={{ base: 4, md: 6 }} w="full">
+      <Box bg="brand.background" py={{ base: 16, md: 40 }} borderTop="1px" borderColor="brand.lightGrey" minH={{ base: "auto", md: "100vh" }} display={{ base: "block", md: "flex" }} alignItems={{ base: "flex-start", md: "center" }} position="relative">
+        <Container maxW="container.md" px={{ base: 4, md: 6 }} w="full" mx="auto">
           <VStack gap={{ base: 12, md: 20 }}>
             <Heading
               as="h2"
@@ -97,8 +98,8 @@ export default function Home() {
       </Box>
 
       {/* Bottom Waitlist Section */}
-      <Box bg="brand.background" py={{ base: 16, md: 20 }} borderTop="1px" borderColor="brand.lightGrey">
-        <Container maxW="container.xl" px={{ base: 4, md: 6 }}>
+      <Box bg="brand.background" py={{ base: 16, md: 20 }} borderTop="1px" borderColor="brand.lightGrey" position="relative">
+        <Container maxW="container.md" px={{ base: 4, md: 6 }} mx="auto">
           <VStack gap={8} textAlign="center">
             <Heading
               as="h3"

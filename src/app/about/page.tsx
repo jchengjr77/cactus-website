@@ -9,8 +9,8 @@ export default function About() {
   return (
     <Box>
       <Navbar />
-      <Box bg="brand.background" py={{ base: 16, md: 24 }}>
-        <Container maxW="100%" px={{ base: 4, md: 0 }}>
+      <Box bg="brand.background" py={{ base: 16, md: 24 }} position="relative">
+        <Container maxW="container.lg" px={{ base: 4, md: 6 }} mx="auto">
           <VStack gap={{ base: 12, md: 16 }} align="stretch">
             <Heading
               as="h1"
@@ -22,11 +22,30 @@ export default function About() {
               about
             </Heading>
 
-            {/* Three Equal Column Grid */}
-            <Box display={{ base: "flex", md: "grid" }} gridTemplateColumns={{ md: "1fr 1fr 1fr" }} flexDirection="column" gap={{ base: 12, md: 0 }} w="full">
-              {/* Left Column - How to Use */}
-              <Box display="flex" justifyContent="flex-end" alignItems="flex-start" px={{ md: 4 }}>
-                <VStack gap={6} align="stretch" w="full" maxW={{ base: "full", md: "320px" }}>
+            {/* Two Column Grid */}
+            <Box display={{ base: "flex", md: "grid" }} gridTemplateColumns={{ md: "1fr 1fr" }} flexDirection="column" gap={{ base: 12, md: 8 }} w="full">
+              {/* Left Column - Screenshot */}
+              <Box display="flex" justifyContent={{ base: "center", md: "flex-end" }} alignItems="flex-start" pr={{ md: 4 }}>
+                <Box
+                  w={{ base: "220px", md: "320px" }}
+                  flexShrink={0}
+                >
+                  <Image
+                    src="/screenshots/groups.PNG"
+                    alt="Cactus app groups screen"
+                    width={{ base: 220, md: 320 }}
+                    height="auto"
+                    borderRadius="xl"
+                    border="2px solid"
+                    borderColor="brand.green"
+                  />
+                </Box>
+              </Box>
+
+              {/* Right Column - Text Sections */}
+              <VStack gap={8} align="stretch" maxW={{ base: "full", md: "400px" }}>
+                {/* How to Use Section */}
+                <VStack gap={6} align="stretch">
                   <Heading
                     as="h2"
                     fontSize={{ base: "2xl", md: "2xl" }}
@@ -44,29 +63,9 @@ export default function About() {
                     </Text>
                   </Box>
                 </VStack>
-              </Box>
 
-              {/* Center Column - Screenshot */}
-              <Box display="flex" justifyContent="center" alignItems="flex-start" px={{ md: 4 }}>
-                <Box
-                  w={{ base: "220px", md: "280px" }}
-                  flexShrink={0}
-                >
-                  <Image
-                    src="/screenshots/groups.PNG"
-                    alt="Cactus app groups screen"
-                    width={{ base: 220, md: 280 }}
-                    height="auto"
-                    borderRadius="xl"
-                    border="2px solid"
-                    borderColor="brand.green"
-                  />
-                </Box>
-              </Box>
-
-              {/* Right Column - Points & Rewards */}
-              <Box display="flex" justifyContent="center" alignItems="flex-start" px={{ md: 4 }} mt={{ base: 0, md: 48 }}>
-                <VStack gap={6} align="stretch" w="full" maxW={{ base: "full", md: "320px" }}>
+                {/* Points & Rewards Section */}
+                <VStack gap={6} align="stretch">
                   <Heading
                     as="h2"
                     fontSize={{ base: "2xl", md: "2xl" }}
@@ -84,15 +83,15 @@ export default function About() {
                     </ChakraLink>
                   </Box>
                 </VStack>
-              </Box>
+              </VStack>
             </Box>
           </VStack>
         </Container>
       </Box>
 
       {/* Bottom Waitlist Section */}
-      <Box bg="brand.background" py={{ base: 16, md: 20 }} borderTop="1px" borderColor="brand.lightGrey">
-        <Container maxW="container.xl" px={{ base: 4, md: 6 }}>
+      <Box bg="brand.background" py={{ base: 16, md: 20 }} borderTop="1px" borderColor="brand.lightGrey" position="relative">
+        <Container maxW="container.md" px={{ base: 4, md: 6 }} mx="auto">
           <VStack gap={4} textAlign="center">
             <Heading
               as="h3"
