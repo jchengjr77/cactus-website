@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Box, Container, Heading, VStack, Text, Image } from '@chakra-ui/react'
 import { Navbar } from '../components/Navbar'
 import { WaitlistForm } from '../components/WaitlistForm'
+import { DecorativeLayout } from '../components/DecorativeLayout'
 
 export default function FAQ() {
   const [openQuestions, setOpenQuestions] = useState<Set<string>>(new Set())
@@ -23,6 +24,7 @@ export default function FAQ() {
   return (
     <Box>
       <Navbar />
+      <DecorativeLayout>
       <Box bg="brand.background" py={{ base: 16, md: 24 }} position="relative">
         <Container maxW={{ base: "full", md: "1000px" }} px={{ base: 4, md: 6 }} mx="auto">
           <VStack gap={{ base: 12, md: 16 }} align="stretch">
@@ -284,6 +286,7 @@ export default function FAQ() {
           </VStack>
         </Container>
       </Box>
+      </DecorativeLayout>
     </Box>
   )
 }

@@ -2,11 +2,13 @@
 
 import { Box, Container, Heading, VStack } from '@chakra-ui/react'
 import { Navbar } from '../components/Navbar'
+import { DecorativeLayout } from '../components/DecorativeLayout'
 
 export default function HallOfFame() {
   return (
     <Box>
       <Navbar />
+      <DecorativeLayout>
       <Box bg="brand.background" py={{ base: 32, md: 40 }} minH="80vh">
         <Container maxW="container.xl" px={{ base: 4, md: 6 }}>
           <VStack gap={8} textAlign="center">
@@ -24,6 +26,7 @@ export default function HallOfFame() {
           </VStack>
         </Container>
       </Box>
+      </DecorativeLayout>
     </Box>
   )
 }

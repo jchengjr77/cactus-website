@@ -3,12 +3,14 @@
 import { Box, Container, Heading, VStack, Text, Link as ChakraLink, Image } from '@chakra-ui/react'
 import { Navbar } from '../components/Navbar'
 import { WaitlistForm } from '../components/WaitlistForm'
+import { DecorativeLayout } from '../components/DecorativeLayout'
 import Link from 'next/link'
 
 export default function About() {
   return (
     <Box>
       <Navbar />
+      <DecorativeLayout>
       <Box bg="brand.background" py={{ base: 16, md: 24 }} position="relative">
         <Container maxW="container.lg" px={{ base: 4, md: 6 }} mx="auto">
           <VStack gap={{ base: 12, md: 16 }} align="stretch">
@@ -107,6 +109,7 @@ export default function About() {
           </VStack>
         </Container>
       </Box>
+      </DecorativeLayout>
     </Box>
   )
 }

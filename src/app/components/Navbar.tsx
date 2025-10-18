@@ -24,13 +24,13 @@ export function Navbar() {
           {/* Desktop Menu Items */}
           <HStack gap={8} display={{ base: 'none', md: 'flex' }}>
             <ChakraLink asChild fontSize="md" fontWeight="600" color="brand.green" textTransform="uppercase" _hover={{ color: 'brand.darkGreen' }}>
-              <Link href="/about">about</Link>
+              <Link href="#how-it-works">how it works</Link>
             </ChakraLink>
             <ChakraLink asChild fontSize="md" fontWeight="600" color="brand.green" textTransform="uppercase" _hover={{ color: 'brand.darkGreen' }}>
-              <Link href="/faq">faq</Link>
+              <Link href="#pricing">pricing</Link>
             </ChakraLink>
             <ChakraLink asChild fontSize="md" fontWeight="600" color="brand.green" textTransform="uppercase" _hover={{ color: 'brand.darkGreen' }}>
-              <Link href="/pricing">pricing</Link>
+              <Link href="#faq">faq</Link>
             </ChakraLink>
             <ChakraLink asChild fontSize="md" fontWeight="600" color="brand.highlight" textTransform="uppercase" _hover={{ color: 'brand.green' }}>
               <Link href="/hall-of-fame">hall of fame</Link>
@@ -63,13 +63,13 @@ export function Navbar() {
             align="stretch"
           >
             <ChakraLink asChild fontSize="md" fontWeight="600" color="brand.green" textTransform="uppercase" _hover={{ color: 'brand.darkGreen' }}>
-              <Link href="/about" onClick={() => setMobileMenuOpen(false)}>about</Link>
+              <Link href="#how-it-works" onClick={() => setMobileMenuOpen(false)}>how it works</Link>
             </ChakraLink>
             <ChakraLink asChild fontSize="md" fontWeight="600" color="brand.green" textTransform="uppercase" _hover={{ color: 'brand.darkGreen' }}>
-              <Link href="/faq" onClick={() => setMobileMenuOpen(false)}>faq</Link>
+              <Link href="#pricing" onClick={() => setMobileMenuOpen(false)}>pricing</Link>
             </ChakraLink>
             <ChakraLink asChild fontSize="md" fontWeight="600" color="brand.green" textTransform="uppercase" _hover={{ color: 'brand.darkGreen' }}>
-              <Link href="/pricing" onClick={() => setMobileMenuOpen(false)}>pricing</Link>
+              <Link href="#faq" onClick={() => setMobileMenuOpen(false)}>faq</Link>
             </ChakraLink>
             <ChakraLink asChild fontSize="md" fontWeight="600" color="brand.highlight" textTransform="uppercase" _hover={{ color: 'brand.green' }}>
               <Link href="/hall-of-fame" onClick={() => setMobileMenuOpen(false)}>hall of fame</Link>

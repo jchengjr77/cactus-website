@@ -3,11 +3,13 @@
 import { Box, Container, Heading, VStack, Text, Flex, Image } from '@chakra-ui/react'
 import { Navbar } from '../components/Navbar'
 import { WaitlistForm } from '../components/WaitlistForm'
+import { DecorativeLayout } from '../components/DecorativeLayout'
 
 export default function Pricing() {
   return (
     <Box>
       <Navbar />
+      <DecorativeLayout>
       <Box bg="brand.background" py={{ base: 16, md: 24 }} position="relative">
         <Container maxW="container.md" px={{ base: 4, md: 6 }} mx="auto">
           <VStack gap={{ base: 8, md: 10 }} align="stretch">
@@ -165,6 +167,7 @@ export default function Pricing() {
           </VStack>
         </Container>
       </Box>
+      </DecorativeLayout>
     </Box>
   )
 }
