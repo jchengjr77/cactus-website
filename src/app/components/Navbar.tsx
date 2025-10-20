@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Box, Container, Flex, HStack, VStack, Text, Link as ChakraLink, IconButton } from '@chakra-ui/react'
 import Link from 'next/link'
+import { FaInstagram } from 'react-icons/fa6'
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -23,6 +24,9 @@ export function Navbar() {
 
           {/* Desktop Menu Items */}
           <HStack gap={8} display={{ base: 'none', md: 'flex' }}>
+            <ChakraLink href="https://www.instagram.com/thecactus.app/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" color="brand.green" _hover={{ opacity: 0.7 }}>
+              <FaInstagram size={24} />
+            </ChakraLink>
             <ChakraLink asChild fontSize="md" fontWeight="600" color="brand.green" textTransform="uppercase" _hover={{ color: 'brand.darkGreen' }}>
               <Link href="#how-it-works">how it works</Link>
             </ChakraLink>
@@ -37,18 +41,22 @@ export function Navbar() {
             </ChakraLink>
           </HStack>
 
-          {/* Mobile Menu Button */}
-          <IconButton
-            display={{ base: 'flex', md: 'none' }}
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            variant="ghost"
-            aria-label="Toggle menu"
-            fontSize="24px"
-            color="brand.green"
-            _hover={{ bg: 'brand.lightGrey' }}
-          >
-            {mobileMenuOpen ? '✕' : '☰'}
-          </IconButton>
+          {/* Mobile Menu Section */}
+          <HStack gap={4} display={{ base: 'flex', md: 'none' }}>
+            <ChakraLink href="https://www.instagram.com/thecactus.app/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" color="brand.green" _hover={{ opacity: 0.7 }}>
+              <FaInstagram size={24} />
+            </ChakraLink>
+            <IconButton
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              variant="ghost"
+              aria-label="Toggle menu"
+              fontSize="24px"
+              color="brand.green"
+              _hover={{ bg: 'brand.lightGrey' }}
+            >
+              {mobileMenuOpen ? '✕' : '☰'}
+            </IconButton>
+          </HStack>
         </Flex>
 
         {/* Mobile Menu */}

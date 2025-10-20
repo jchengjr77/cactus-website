@@ -33,18 +33,27 @@ export function WaitlistForm() {
     setLoading(true)
 
     try {
-      const { error: supabaseError } = await supabase
-        .from('waitlist')
-        .insert([{email: email}])
+      const { data, error: functionError } = await supabase.functions.invoke('send-waitlist-email', {
+        body: { email: email.trim() }
+      })
 
-      if (supabaseError) {
-        throw supabaseError
+      if (functionError) {
+        throw functionError
+      }
+
+      if (data?.error) {
+        throw new Error(data.error)
       }
 
       setSuccess(true)
       setEmail('')
-    } catch (err) {
-      setError('something went wrong. please try again.')
+    } catch (err: any) {
+      // Check if it's a duplicate email error
+      if (err?.message?.includes('duplicate') || err?.details?.includes('duplicate')) {
+        setError('this email is already on the waitlist!')
+      } else {
+        setError('something went wrong. please try again.')
+      }
       console.error('Error adding to waitlist:', err)
     } finally {
       setLoading(false)
