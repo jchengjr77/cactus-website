@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Box, Container, Heading, VStack, Text, Image } from '@chakra-ui/react'
+import { Box, Container, Heading, VStack, Text } from '@chakra-ui/react'
 import { Navbar } from '../components/Navbar'
 import { WaitlistForm } from '../components/WaitlistForm'
 import { DecorativeLayout } from '../components/DecorativeLayout'
