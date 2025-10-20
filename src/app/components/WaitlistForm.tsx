@@ -9,6 +9,7 @@ export function WaitlistForm() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [success, setSuccess] = useState(false)
+  const [alreadyOnWaitlist, setAlreadyOnWaitlist] = useState(false)
 
   const validateEmail = (email: string) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -19,6 +20,7 @@ export function WaitlistForm() {
     e.preventDefault()
     setError('')
     setSuccess(false)
+    setAlreadyOnWaitlist(false)
 
     if (!email.trim()) {
       setError('please enter your email')
@@ -33,6 +35,27 @@ export function WaitlistForm() {
     setLoading(true)
 
     try {
+      // First, check if the email is already in the waitlist
+      const { data: existingUser, error: checkError } = await supabase
+        .from('waitlist')
+        .select('email')
+        .eq('email', email.trim())
+        .maybeSingle()
+
+      if (checkError) {
+        console.error('Error checking waitlist:', checkError)
+        throw new Error('Failed to check waitlist status')
+      }
+
+      // If user already exists, show a friendly message
+      if (existingUser) {
+        setAlreadyOnWaitlist(true)
+        setSuccess(true)
+        setEmail('')
+        return
+      }
+
+      // If user doesn't exist, add them to the waitlist and send email
       const { data, error: functionError } = await supabase.functions.invoke('send-waitlist-email', {
         body: { email: email.trim() }
       })
@@ -48,12 +71,7 @@ export function WaitlistForm() {
       setSuccess(true)
       setEmail('')
     } catch (err: any) {
-      // Check if it's a duplicate email error
-      if (err?.message?.includes('duplicate') || err?.details?.includes('duplicate')) {
-        setError('this email is already on the waitlist!')
-      } else {
-        setError('something went wrong. please try again.')
-      }
+      setError('something went wrong. please try again.')
       console.error('Error adding to waitlist:', err)
     } finally {
       setLoading(false)
@@ -64,7 +82,7 @@ export function WaitlistForm() {
     return (
       <Box textAlign="center" py={4}>
         <Text fontSize="lg" color="brand.green" fontWeight="600">
-          welcome to the cactus app :)
+          {alreadyOnWaitlist ? "we've already got you :)" : 'welcome to the cactus app :)'}
         </Text>
       </Box>
     )
