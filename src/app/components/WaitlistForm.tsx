@@ -56,7 +56,8 @@ export function WaitlistForm() {
       }
 
       // If user doesn't exist, add them to the waitlist and send email
-      const { data, error: functionError } = await supabase.functions.invoke('send-waitlist-email', {
+      // (this is handled by the edge function)
+      const { data, error: functionError } = await supabase.functions.invoke('add-to-waitlist', {
         body: { email: email.trim() }
       })
 
